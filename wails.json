@@ -1,0 +1,12 @@
+{
+  "name": "wailstodo",
+  "outputfilename": "wailstodo",
+  "frontend:install": "pnpm install",
+  "frontend:build": "pnpm build",
+  "frontend:dev:watcher": "pnpm dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "Oussama Sethoum",
+    "email": "os.sethoum@gmail.com"
+  }
+}

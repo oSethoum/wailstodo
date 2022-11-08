@@ -1,0 +1,140 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 8000,
+    "height": 8000,
+    "scrollTop": -3317.8333333333335,
+    "scrollLeft": -2991.6666666666665,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": true,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "database",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "Todo",
+        "comment": "",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": true,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b8b92f75-5cec-4476-9ada-83f5dbed1f6f"
+          },
+          {
+            "name": "text",
+            "comment": "",
+            "dataType": "TINYTEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": true,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.83544921875,
+              "widthDefault": 60
+            },
+            "id": "8d091d7c-3937-4a5a-b3d5-a1fee296d8c3"
+          },
+          {
+            "name": "done",
+            "comment": "",
+            "dataType": "BOOL",
+            "default": "false",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "979efc21-5324-4ba7-8df4-9275fcbc82e1"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 3213.6667,
+          "top": 3403.8333,
+          "zIndex": 26,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": "#0099FF"
+        },
+        "visible": true,
+        "id": "d84aaee9-ada5-4c69-b11d-9fb2048a83ed"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": []
+  }
+}

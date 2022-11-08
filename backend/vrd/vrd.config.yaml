@@ -1,0 +1,35 @@
+# vrd config file
+
+# input vuerd file path
+input: vrd/input.vuerd.json
+
+# debug mode prints information
+debug: true
+
+# support sqlite3, mysql, postgres
+database: sqlite3
+
+# ent config
+# ent:
+#   output: ./output
+#   package: app
+#   echo: true
+#   privacy: true
+#   privacy_node: false
+#   auth: true
+#   graphql:
+#     file_upload: true
+#     subscription: true
+#     relay_connection: true
+
+# gorm config
+gorm:
+  output: ./
+  gorm_model: true
+  package: app/backend
+  fiber: true
+  #auth: true
+  #encryption: true
+  #file_upload: true
+  socket: true
+  swagger: true

@@ -1,0 +1,195 @@
+basePath: /api
+definitions:
+  gorm.DeletedAt:
+    properties:
+      time:
+        type: string
+      valid:
+        description: Valid is true if Time is not NULL
+        type: boolean
+    type: object
+  models.Todo:
+    properties:
+      createdAt:
+        type: string
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      done:
+        type: boolean
+      id:
+        type: integer
+      text:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: This is an API Application
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: App
+  version: "1.0"
+paths:
+  /todos:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        name: deleted
+        type: boolean
+      - in: query
+        name: like
+        type: string
+      - in: query
+        name: limit
+        type: integer
+      - in: query
+        name: offset
+        type: integer
+      - in: query
+        name: preload
+        type: string
+      - in: query
+        name: select
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Todo'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "401":
+          description: Unauthorized
+          schema:
+            type: string
+      summary: Query Todo
+      tags:
+      - todos
+  /todos/:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Create Todo Body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.Todo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Todo'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "401":
+          description: Unauthorized
+          schema:
+            type: string
+      summary: Create One Todo
+      tags:
+      - todos
+  /todos/:id:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Todo'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "401":
+          description: Unauthorized
+          schema:
+            type: string
+      summary: Delete One Todo
+      tags:
+      - todos
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Todo'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "401":
+          description: Unauthorized
+          schema:
+            type: string
+      summary: Get Todo
+      tags:
+      - todos
+    patch:
+      consumes:
+      - application/json
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update Todo Body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.Todo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Todo'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "401":
+          description: Unauthorized
+          schema:
+            type: string
+      summary: Update One Todo
+      tags:
+      - todos
+swagger: "2.0"
